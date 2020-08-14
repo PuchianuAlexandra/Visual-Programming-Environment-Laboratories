@@ -1,0 +1,166 @@
+﻿<Window x:Class="Restaurant.Views.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurant.Views"
+        mc:Ignorable="d"
+        Title="Register" Height="500" Width="400"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Restaurant;component/icon.jpg"
+        ResizeMode="NoResize">
+    <Grid x:Name="grid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Restaurant;component/Images/fundal.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" ></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2.5*"></RowDefinition>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" Margin="0,5" Source="/Restaurant;component/Images/registerIcon.png" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" Margin="15,0,0,10" Background="#FF3A93FF">
+            <TextBox 
+                BorderThickness="0"
+                Margin="0,17,5,5"
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center"
+                FontSize="15" IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Nume
+            </TextBox>
+            <TextBox 
+                BorderThickness="0"
+                Margin="0,15,5,5"
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center"
+                FontSize="15" IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Prenume
+            </TextBox>
+            <TextBox 
+                BorderThickness="0"
+                Margin="0,12,5,5"
+                HorizontalContentAlignment="Right"
+                VerticalContentAlignment="Center"
+                FontSize="15" 
+                IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Telefon
+            </TextBox>
+            <TextBox 
+                BorderThickness="0"
+                Margin="0,12,5,5"
+                HorizontalContentAlignment="Right"
+                VerticalContentAlignment="Center"
+                FontSize="15" IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Mail
+            </TextBox>
+            <TextBox
+                BorderThickness="0"
+                Margin="0,13,5,5"
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center"
+                FontSize="15" IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Parola
+            </TextBox>
+            <TextBox 
+                BorderThickness="0"
+                Margin="0,15,5,5"
+                HorizontalContentAlignment="Right" 
+                VerticalContentAlignment="Center"
+                FontSize="15" IsReadOnly="True" 
+                Background="Transparent" 
+                FontFamily="Stencil">Adresa
+            </TextBox>
+        </StackPanel>
+        <StackPanel x:Name="panel" Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Margin="0,0,15,10" Background="#FF3A93FF">
+            <TextBox 
+                x:Name="txtLastName"
+                BorderThickness="0"
+                Margin="10,15,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Center"
+                FontSize="12"  
+                FontFamily="Segoe Print">
+            </TextBox>
+            <TextBox 
+                x:Name="txtFirstName"
+                BorderThickness="0"
+                Margin="10,5,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Center"
+                FontSize="12"  
+                FontFamily="Segoe Print">
+            </TextBox>
+            <TextBox 
+                x:Name="txtPhoneNr"
+                BorderThickness="0"
+                Margin="10,5,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Center"
+                FontSize="12"  
+                FontFamily="Segoe Print">
+            </TextBox>
+            <TextBox 
+                x:Name="txtMail"
+                BorderThickness="0"
+                Margin="10,5,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Center"
+                FontSize="12"  
+                FontFamily="Segoe Print">
+            </TextBox>
+            <PasswordBox 
+                x:Name="txtPassword"
+                BorderThickness="0"
+                Margin="10,5,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Center"
+                FontSize="12"  
+                FontFamily="Segoe Print">
+            </PasswordBox>
+            <TextBox 
+                x:Name="txtAddress"
+                BorderThickness="0"
+                Margin="10,5,5,10"
+                HorizontalContentAlignment="Left" 
+                VerticalContentAlignment="Top"
+                FontSize="12" 
+                Height="50"
+                TextWrapping="WrapWithOverflow"
+                FontFamily="Segoe Print">
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="15,0,15,10" Background="#FF3A93FF">
+            <Button x:Name="btnSingUp" BorderThickness="0" FontSize="15" Margin="70,10,5,0" Height="50" Width="85" FontFamily="Stencil" Click="btnSingUp_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                </Button.Background> Sing Up
+            </Button>
+            <Button x:Name="btnCancel"
+                    BorderThickness="0"
+                    FontSize="15" 
+                    Margin="60,10,5,0" 
+                    Height="50" 
+                    Width="85" 
+                    FontFamily="Stencil"
+                    Click="btnCancel_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                </Button.Background> Cancel
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

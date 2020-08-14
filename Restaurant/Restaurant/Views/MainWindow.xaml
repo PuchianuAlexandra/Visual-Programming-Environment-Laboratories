@@ -1,0 +1,156 @@
+﻿<Window x:Class="Restaurant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurant"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Icon="/Restaurant;component/icon.jpg">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Restaurant;component/Images/fundal.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition/>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1.25*"></RowDefinition>
+            <RowDefinition Height="1.75*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Source="/Restaurant;component/Images/logo.png" />
+
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtTitle" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" IsReadOnly="True" Background="Transparent" Foreground="#FF3A93FF" FontFamily="Stencil" FontWeight="Bold" >Acasa</TextBox>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Background="#FF3A93FF" Margin="5,0,0,20">
+            <Menu Background="Transparent">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Background="#FF3A93FF" Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem Header="Acasa" 
+                          BorderThickness="0" 
+                          FontSize="20" 
+                          Margin="10,5" 
+                          Height="40"
+                          Click="MenuItemHome_Click" 
+                          FontFamily="Stencil">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem 
+                          x:Name="btnCart"
+                          Header="Cosul meu" 
+                          BorderThickness="0" 
+                          FontSize="20" 
+                          Margin="10,5" 
+                          Height="40"
+                          Click="MenuItemCart_Click" 
+                          FontFamily="Stencil">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                    </MenuItem.Background>
+                </MenuItem>                
+                <MenuItem Header="Preparate" 
+                          BorderThickness="0" 
+                          FontSize="20" 
+                          Margin="10,5" 
+                          Height="40" 
+                          FontFamily="Stencil" >
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                    </MenuItem.Background>
+                    <MenuItem Header="Pizza" 
+                              BorderThickness="0" 
+                              FontSize="20" 
+                              Margin="10,5" 
+                              Height="40"
+                              Click="MenuItemPizza_Click" 
+                              FontFamily="Stencil">
+                        <MenuItem.Background>
+                            <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Paste"
+                              BorderThickness="0" 
+                              FontSize="20" 
+                              Margin="10,5" 
+                              Height="40"
+                              Click="MenuItemPaste_Click" 
+                              FontFamily="Stencil">
+                        <MenuItem.Background>
+                            <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Salate" 
+                              BorderThickness="0" 
+                              FontSize="20" 
+                              Margin="10,5" 
+                              Height="40"
+                              Click="MenuItemSalad_Click" 
+                              FontFamily="Stencil">
+                        <MenuItem.Background>
+                            <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Deserturi" 
+                              BorderThickness="0" 
+                              FontSize="20" 
+                              Margin="10,5" 
+                              Height="40"
+                              Click="MenuItemDesert_Click" 
+                              FontFamily="Stencil">
+                        <MenuItem.Background>
+                            <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                        </MenuItem.Background>
+                    </MenuItem>
+                    <MenuItem Header="Bauturi" 
+                              BorderThickness="0" 
+                              FontSize="20" 
+                              Margin="10,5" 
+                              Height="40"
+                              Click="MenuItemDrink_Click" 
+                              FontFamily="Stencil">
+                        <MenuItem.Background>
+                            <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                        </MenuItem.Background>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0" Background="#FF3A93FF" Margin="5,15,0,10">
+            <TextBox x:Name="txtUserStatus" BorderThickness="0" Background="Transparent" FontFamily="Stencil" FontSize="20" HorizontalContentAlignment="Center" IsReadOnly="True"></TextBox>
+            <TextBox x:Name="txtUserName" BorderThickness="0" Background="Transparent" FontFamily="Stencil"  FontSize="20" HorizontalContentAlignment="Center" TextWrapping="WrapWithOverflow" IsReadOnly="True"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="0" Background="#FF3A93FF" Margin="5,15,0,15">
+            <Button x:Name="btnSignIn" BorderThickness="0" FontSize="20" Margin="10,5" Height="50" FontFamily="Stencil" Click="btnSignIn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                </Button.Background>SIGN IN</Button>
+            <Button x:Name="btnSignOut" BorderThickness="0" FontSize="20" Margin="10,5" Height="50" FontFamily="Stencil" Click="btnSignOut_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Restaurant;component/Images/blackBorder.png" ></ImageBrush>
+                </Button.Background>SIGN OUT</Button>
+        </StackPanel>
+        <Frame
+            x:Name="MainFrame" 
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.RowSpan="4" 
+            NavigationUIVisibility="Hidden"
+            Margin="10">
+            <Frame.Background>
+                <ImageBrush ImageSource="/Restaurant;component/Images/restaurant.jpg" Stretch="UniformToFill" ></ImageBrush>
+            </Frame.Background>
+        </Frame>
+    </Grid>
+</Window>
